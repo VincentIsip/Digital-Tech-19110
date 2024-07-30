@@ -6,13 +6,22 @@ import json
 
 views = Blueprint("views", __name__)
 
-#notes
+
+
+#home
 @views.route("/")
 @views.route("/home")
 @login_required
 def home():
     posts = Post.query.all()
     return render_template("home.html", user=current_user, posts=posts)
+
+#notes
+@views.route("/notes")
+@login_required
+def notes():
+    posts = Post.query.all()
+    return render_template("notes.html", user=current_user, posts=posts)
 
 #blog
 @views.route("/create-post", methods=['GET', 'POST'])
@@ -32,7 +41,7 @@ def create_post():
 
     return render_template('create_post.html', user=current_user)
 
-
+#deleting posts
 @views.route("/delete-post/<id>")
 @login_required
 def delete_post(id):

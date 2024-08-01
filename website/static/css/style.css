@@ -1,5 +1,6 @@
+/*template*/
 body{
-    background-color: burlywood;
+    background: linear-gradient(burlywood, rgb(215, 142, 46))
 }
 
 .navcolor{
@@ -9,3 +10,21 @@ body{
 .footercolor{
     background: rgb(184, 109, 55);
 }
+
+h1{
+    color:saddlebrown;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: dotted underline;
+}
+
+/*submit buttons*/
+.notebutton{
+    color: rgb(184, 109, 55);
+}
+
+.loginbutton{
+    color: rgb(184, 109, 55);
+}
+
